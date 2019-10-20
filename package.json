@@ -1,0 +1,56 @@
+{
+  "name": "arr-2-sheet-server",
+  "version": "1.0.0",
+  "description": "arr-2-sheet-server ( https://github.com/code4kit/arr-2-sheet-client#readme )",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "commit": "git cz",
+    "standard": "semistandard --fix",
+    "document": "documentation build -f md ./src/ | add-text-to-markdown ./DOCUMENT.md --section 'DocumentationJS' --write",
+    "readme": "npx readme-md-generator",
+    "test": "mocha"
+  },
+  "author": "code4kit",
+  "contributors": [
+    "waricoma"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/code4kit/arr-2-sheet-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code4kit/arr-2-sheet-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/code4kit/arr-2-sheet-server/issues"
+  },
+  "engines": {
+    "yarn": ">=1.19.1",
+    "node": ">=12.11.1"
+  },
+  "dependencies": {
+    "array-to-google-sheets": "^1.0.1",
+    "dotenv": "^8.0.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "add-text-to-markdown": "^2.0.0",
+    "commitizen": "^4.0.3",
+    "cz-emoji": "^1.1.2",
+    "documentation": "^12.1.2",
+    "mocha": "^6.2.2",
+    "readme-md-generator": "^0.6.4",
+    "semistandard": "^14.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-emoji"
+    }
+  },
+  "semistandard": {
+    "global": [
+      "describe",
+      "it"
+    ]
+  }
+}
