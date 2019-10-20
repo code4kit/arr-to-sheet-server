@@ -1,7 +1,7 @@
 {
-  "name": "arr-2-sheet-server",
+  "name": "arr-to-sheet-server",
   "version": "1.0.0",
-  "description": "arr-2-sheet-server ( https://github.com/code4kit/arr-2-sheet-client#readme )",
+  "description": "arr-to-sheet-server ( https://github.com/code4kit/arr-to-sheet-client#readme )",
   "main": "./src/index.js",
   "scripts": {
     "start": "node ./src/index.js",
@@ -16,13 +16,13 @@
     "waricoma"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/code4kit/arr-2-sheet-server#readme",
+  "homepage": "https://github.com/code4kit/arr-to-sheet-server#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code4kit/arr-2-sheet-server.git"
+    "url": "git+https://github.com/code4kit/arr-to-sheet-server.git"
   },
   "bugs": {
-    "url": "https://github.com/code4kit/arr-2-sheet-server/issues"
+    "url": "https://github.com/code4kit/arr-to-sheet-server/issues"
   },
   "engines": {
     "yarn": ">=1.19.1",
