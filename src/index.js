@@ -32,6 +32,15 @@ const io = socketIo(server);
 
 let doingTask = false;
 
+/**
+ * google cred
+ * @type {{client_email: string, private_key: string}}
+ */
+const CRED = {
+  client_email: process.env.G_CLIENT_EMAIL,
+  private_key: process.env.G_PRIVATE_KEY.replace(/\\n/g, '\n')
+};
+
 io.on('connection', (socket) => {
   io.to(socket.id).emit('executionPropriety', !doingTask);
 
@@ -44,15 +53,12 @@ io.on('connection', (socket) => {
     }
 
     (async () => {
-      let arrToGSheets = new ArrayToGoogleSheets(msg.docKey, {
-        client_email: process.env.G_CLIENT_EMAIL,
-        private_key: process.env.G_PRIVATE_KEY
-      });
+      let arrToGSheets = new ArrayToGoogleSheets(msg.docKey, CRED);
 
       try {
         await arrToGSheets.updateGoogleSheets(msg.sheetName, msg.task, msg.option);
       } catch (err) {
-        io.to(socket.id).emit('err', err);
+        io.to(socket.id).emit('err', JSON.stringify(err));
       }
 
       // garbage collection
