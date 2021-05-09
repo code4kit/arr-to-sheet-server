@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "array-to-google-sheets": "^2.0.0",
-    "dotenv": "^8.0.0",
+    "dotenv": "^9.0.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
